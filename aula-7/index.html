@@ -18,29 +18,29 @@
     <main>
         <h2>Cadastro</h2>
 
-        <form id="cadastro" novalidate>
+        <form id="cadastro" novalidate onsubmit="executar(event)">
             <label for="nome">Nome *</label>
             <input type="text" id="nome" name="nome" required>
-            <span id="erro-nome" class="oculto"></span>
+            <p id="erro-nome" class="oculto"></p>
 
             <label for="idade">Idade *</label>
             <input type="number" id="idade" name="idade"
                    min="1" max="120" required>
-            <span id="erro-idade" class="oculto"></span>
+            <p id="erro-idade" class="oculto"></p>
 
             <label for="email">E-mail *</label>
             <input type="email" id="email" name="email" required>
-            <span id="erro-email" class="oculto"></span>
+            <p id="erro-email" class="oculto"></p>
 
             <label for="termos">
                 <input type="checkbox" id="termos" name="termos" required>
                 Concordo com os termos e condições
             </label>
-            <span id="erro-termos" class="oculto"></span>
+            <p id="erro-termos" class="oculto"></p>
 
-            <button onclick="executar(event)">Enviar</button>
-
+            <button type="submit">Enviar</button>
             <p id="concluido" class="oculto"></p>
+
         </form>
     </main>
 
